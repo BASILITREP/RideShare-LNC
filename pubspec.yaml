@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   country_code_picker: ^3.0.0 
-  
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -28,4 +28,8 @@ flutter:
   assets:
     - assets/LC_logo.png
     - assets/White_Bg.png
+    - assets/gab.jpg
+    - assets/lance.jpg
+    - assets/JW.jpg
+    - assets/Bas.jpg
 

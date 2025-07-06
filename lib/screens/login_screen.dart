@@ -1,6 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import './driver_passenger_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import './verify_otp.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -8,6 +9,11 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       home: Scaffold(
         backgroundColor: Colors.white, 
         body: Column(
@@ -45,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                     'Welcome, Ka LNC!',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 22,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
@@ -89,18 +95,18 @@ class LoginScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DriverPassengerScreen(),
+                            builder: (context) => const VerifyOtp(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
-                        foregroundColor: Colors.black,
+                        foregroundColor: Colors.green,
                       ),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text('Next'),
+                          Text('Next',style: TextStyle(fontWeight: FontWeight.bold)),
                           Icon(Icons.arrow_forward),
                         ],
                       ),
